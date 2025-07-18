@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel CHK - Render</title>
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>💳 Verificador de Cartões (CHK)</h1>
+        <form method="POST">
+            <input type="text" name="cc" placeholder="Número do cartão" required>
+            <input type="text" name="mes" placeholder="Mês (MM)" required>
+            <input type="text" name="ano" placeholder="Ano (AAAA)" required>
+            <input type="text" name="cvv" placeholder="CVV" required>
+            <button type="submit">Verificar Cartão</button>
+        </form>
+        {% if result %}
+            <div class="result">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
